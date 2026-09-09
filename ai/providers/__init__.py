@@ -1,11 +1,3 @@
-from ai.providers.factory import get_provider
-from ai.providers.ollama import OllamaProvider
-from ai.providers.groq import GroqProvider
-from ai.providers.openai_compat import OpenAICompatProvider
+from .factory import get_provider, AIProviderFactory
 
-__all__ = [
-    "get_provider",
-    "OllamaProvider",
-    "GroqProvider",
-    "OpenAICompatProvider",
-]
+__all__ = ["get_provider", "AIProviderFactory"]
