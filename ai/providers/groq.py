@@ -1,9 +1,8 @@
 import os
 import streamlit as st
 from groq import Groq
-from .base import BaseAIProvider
 
-class GroqProvider(BaseAIProvider):
+class GroqProvider:
     def __init__(self):
         # Streamlit Secrets-ൽ നിന്ന് API Key എടുക്കുന്നു
         self.api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
